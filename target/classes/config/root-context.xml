@@ -10,10 +10,10 @@
 	
 	<!-- property-placeholder location에 있는 파일을 읽어들임. 읽어들여서 아래 dataSource에서 사용함 -->
 	<!-- 1. 읽을 경로 1 src/main/resources/config/database.properties를 읽어들임 -->
-	<!-- <context:property-placeholder location="classpath:config/database.properties" /> -->
+	 <context:property-placeholder location="classpath:config/database.properties" />
+	 
 	<!-- 2. 읽을 경로 2 webapp/WEB-INF/config/database.propertieslocation 파일을 읽어들임. -->
-	
-	<context:property-placeholder location="/WEB-INF/config/database.properties"/>  
+	<!-- <context:property-placeholder location="/WEB-INF/config/database.properties"/> -->
 	
 	<!-- datasource 빈 등록 dataSource 객체 생성 톰캣에서 사용하는 pool로 만들어져서 필요할때마다 사용 가능-->
 	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource">
